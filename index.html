@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando el total</title>
+    <link rel="icon" type="image/png" href="assets/favicon/icono.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="flex-container">
+
+        <div class="flex-item-card">
+            <img src="assets/imgs/image.png" alt="Fondo">
+            <h4>Laptop Gamer AMD</h4>
+            <input placeholder="Cantidad" id="amount_input" type="text">
+            <input placeholder="Color" id="colour_input" type="text">
+            <p>Precio:400000</p>
+            <button onclick="
+        amount=document.querySelector('#amount_input')
+        total=document.querySelector('#total')
+        total.innerHTML=(amount.value *400000).toLocaleString() 
+        amount_total=document.querySelector('#amount')
+        amount_total.innerHTML=amount.value
+        colour_input=document.querySelector('#colour_input')
+        colour=document.querySelector('#colour')
+        colour.style.backgroundColor=colour_input.value">Calcular Total</button>
+        </div>
+
+        <div class="flex-item">
+            <p>Total: $<span id="total">0</span></p>
+            <p> Cantidad: <span id="amount"> 0</span></p>
+            <div id="circle">
+                <p>Color: </p>
+                <span id="colour"> </span>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
